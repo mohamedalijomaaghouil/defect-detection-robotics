@@ -45,6 +45,7 @@ from launch.substitutions import (
     PathJoinSubstitution,
 )
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
 
 
@@ -106,7 +107,9 @@ def launch_setup(context, *args, **kwargs):
             initial_joint_controllers,
         ]
     )
-    robot_description = {"robot_description": robot_description_content}
+    robot_description = {
+        "robot_description": ParameterValue(robot_description_content, value_type=str)
+    }
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -164,8 +167,6 @@ def launch_setup(context, *args, **kwargs):
             "-name",
             "ur",
             "-allow_renaming",
-            "-pose",
-            "1 0 0.4 0 0 0" #x y z roll pitch yaw
             "true",
         ],
     )

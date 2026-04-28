@@ -2,6 +2,14 @@
 Changelog for package ur_controllers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.12.0 (2026-01-13)
+-------------------
+* Ensure latched qos is reliable (backport `#1594 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/1594>`_) (`#1632 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/1632>`_)
+* Contributors: mergify[bot]
+
+2.11.0 (2025-12-01)
+-------------------
+
 2.10.0 (2025-10-23)
 -------------------
 

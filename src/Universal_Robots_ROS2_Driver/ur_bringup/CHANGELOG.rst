@@ -2,6 +2,12 @@
 Changelog for package ur_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.12.0 (2026-01-13)
+-------------------
+
+2.11.0 (2025-12-01)
+-------------------
+
 2.10.0 (2025-10-23)
 -------------------
 * Add support for UR18 (backport `#1524 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/1524>`_) (`#1525 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/1525>`_)

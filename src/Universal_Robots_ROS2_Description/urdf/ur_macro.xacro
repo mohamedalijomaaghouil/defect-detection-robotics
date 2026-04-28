@@ -50,22 +50,18 @@
      - Muhammad Asif Rana
   -->
 
-<!--  <xacro:include filename="$(find ur_description)/urdf/ur_transmissions.xacro" />
-  <xacro:include filename="$(find ur_description)/urdf/ur_common.xacro" />
--->
- <!-- <xacro:include filename="$(find ur_description)/urdf/ur_utils.xacro" />
- -->
-   <xacro:macro name="ur_robot" params="
+  <xacro:include filename="$(find ur_description)/urdf/inc/ur_transmissions.xacro" />
+  <xacro:include filename="$(find ur_description)/urdf/inc/ur_common.xacro" />
+
+  <xacro:macro name="ur_robot" params="
     name
     tf_prefix
     parent
     *origin
-    
-    joint_limits_parameters_file:=''
-    kinematics_parameters_file:=''
-    physical_parameters_file:=''
-    visual_parameters_file:=''
-    
+    joint_limits_parameters_file
+    kinematics_parameters_file
+    physical_parameters_file
+    visual_parameters_file
     generate_ros2_control_tag:=true
     transmission_hw_interface:=hardware_interface/PositionJointInterface
     safety_limits:=false
@@ -97,7 +93,17 @@
     trajectory_port:=50003
     non_blocking_read:=true
     keep_alive_count:=2"
+
     >
+
+    <!-- Load configuration data from the provided .yaml files -->
+    <xacro:read_model_data
+      joint_limits_parameters_file="${joint_limits_parameters_file}"
+      kinematics_parameters_file="${kinematics_parameters_file}"
+      physical_parameters_file="${physical_parameters_file}"
+      visual_parameters_file="${visual_parameters_file}"
+      force_abs_paths="${sim_gazebo or sim_ignition}"/>
+
 
     <xacro:if value="${generate_ros2_control_tag}">
       <!-- ros2 control include -->
