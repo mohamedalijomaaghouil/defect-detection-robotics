@@ -108,10 +108,11 @@ class ShoeLocalizationNode(Node):
 
         # --- LOG avec YAW affiché ---
         log_text = (
-            f'Found! u={u} v={v} D={Z:.2f}m '
-            f'Yaw={angle_deg:.1f}°' # <--- Il est de retour !
-        )
-        self.get_logger().info(log_text)
+    		f'[camera_frame] '
+    		f'X={X:.3f}m Y={Y:.3f}m Z={Z:.3f}m | '
+    		f'u={u} v={v} | '
+    		f'Yaw={angle_deg:.1f}°'
+)
 
         shoe_info = {
             "present": True,
