@@ -1,13 +1,15 @@
 # Robotic Shoe Defect Inspection — UR3e, ROS 2, Deep Learning
 
-Semester 7–8 team project at **SIGMA Clermont** (2025–2026), part of the European project **REMAIN-SUDOE**.
+Semester 7–8 project of 8 students at **SIGMA Clermont** (2025–2026), part of the European project **REMAIN-SUDOE**. I was in the robotics sub-team of 3; the other students worked on the dataset and the deep-learning defect detection.
 
 A **Universal Robots UR3e** with a wrist-mounted **Intel RealSense** camera finds a shoe on the table, photographs it from several viewpoints, and a deep learning pipeline detects and classifies the defects in each photo.
 
 ## Team
 
-- **Mohamed Ali Jomaa Ghouil** — 3D localization of the shoe from the depth image (`localization_node.py`) and the debug image overlay
+- **Mohamed Ali Jomaa Ghouil** — 3D localization of the shoe from the depth image (`localization_node.py`) and the debug image overlay; tested on a ROS 2 bag (285 synchronised RGB + depth frames), live in Gazebo and on the real RealSense camera
 - **Chahd** and **Thomas** — MoveIt multi-view acquisition and Gazebo simulation
+
+Robotics sub-team of 3, within a project of 8 students. The dataset and the deep-learning defect detection were built by the other students.
 
 ## Pipeline
 
